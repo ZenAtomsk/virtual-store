@@ -17,31 +17,11 @@ export const activeCategory = (name)=>{
   }
 }
 
-// export const action = (argument)=>{
-//   return{
-//     type: '',
-//     payload: '',
-//   }
-// }
-
-//export function with state and action as arguments
-//action has type and payload
-//switch statement to determine wht type
-//default return is state
-
 const categoryReducer = (state=initialState, action)=>{
   let {type, payload} = action;
   switch(type){
     case 'Category':
-      // do case things
-      // let categories = state.categories.map(categories=>{
-      //   if(categories.name === payload){
-      //     return {name: categories.name, displayName: categories.displayName, description: categories.description, active: payload }
-      //   }
-      //   return categories;
-      // })
       return{...state, active: payload}
-    
 
     default:
       return state;
